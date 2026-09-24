@@ -30,8 +30,13 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
+# copias de emails guardadas en desarrollo
+.emails
+
 # env files (can opt-in for committing if needed)
 .env*
+# La plantilla sí se versiona: documenta qué variables hacen falta, sin valores.
+!.env.example
 
 # vercel
 .vercel

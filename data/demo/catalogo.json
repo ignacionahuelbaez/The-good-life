@@ -1,0 +1,244 @@
+{
+  "_meta": {
+    "origen": "demo",
+    "descripcion": "Catálogo de demostración. NO es el catálogo real del negocio.",
+    "creado": "2026-09-14",
+    "proposito": "Validar diseño, estructura y funcionamiento con datos realistas antes de que exista el catálogo definitivo.",
+    "comoReemplazar": "Ver data/demo/README.md"
+  },
+
+  "categorias": [
+    { "slug": "tops", "nombre": "Tops", "descripcion": "Tops deportivos de sostén medio y alto." },
+    { "slug": "calzas", "nombre": "Calzas", "descripcion": "Calzas de tiro alto, ciclista y oxford." },
+    { "slug": "buzos-y-camperas", "nombre": "Buzos y camperas", "descripcion": "Abrigo liviano para entrenar y para todos los días." },
+    { "slug": "remeras-y-shorts", "nombre": "Remeras y shorts", "descripcion": "Prendas livianas de entrenamiento." },
+    { "slug": "accesorios", "nombre": "Accesorios", "descripcion": "Complementos para el día a día." }
+  ],
+
+  "productos": [
+    {
+      "slug": "top-duna",
+      "nombre": "Top Duna",
+      "categoria": "tops",
+      "descripcion": "Top de sostén medio en tejido seamless, sin costuras laterales. La banda inferior es ancha y queda firme sin marcar. Copa removible.\n\nTela: 78% poliamida, 22% elastano.",
+      "precio": 58000,
+      "destacado": true,
+      "imagenes": [
+        { "archivo": "top-duna-1.jpg", "alt": "Top deportivo negro de sostén medio, vista frontal" },
+        { "archivo": "top-duna-2.jpg", "alt": "Top deportivo negro, vista de espalda" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Negro", "stock": 6, "sku": "TDU-S-NEG" },
+        { "talle": "M", "color": "Negro", "stock": 4, "sku": "TDU-M-NEG" },
+        { "talle": "L", "color": "Negro", "stock": 2, "sku": "TDU-L-NEG" },
+        { "talle": "S", "color": "Lavanda", "stock": 3, "sku": "TDU-S-LAV" },
+        { "talle": "M", "color": "Lavanda", "stock": 0, "sku": "TDU-M-LAV" },
+        { "talle": "L", "color": "Lavanda", "stock": 5, "sku": "TDU-L-LAV" }
+      ]
+    },
+
+    {
+      "slug": "calza-duna-tiro-alto",
+      "nombre": "Calza Duna Tiro Alto",
+      "categoria": "calzas",
+      "descripcion": "Calza de tiro alto con cintura ancha que no se enrolla al moverse. Tejido opaco comprobado en sentadilla. Bolsillo interno en la cintura para la llave.\n\nTela: 75% poliamida, 25% elastano.",
+      "precio": 89000,
+      "destacado": true,
+      "imagenes": [
+        { "archivo": "calza-duna-1.jpg", "alt": "Calza deportiva negra de tiro alto, vista frontal" },
+        { "archivo": "calza-duna-2.jpg", "alt": "Calza deportiva negra, vista lateral" },
+        { "archivo": "calza-duna-3.jpg", "alt": "Detalle de la cintura ancha de la calza" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Negro", "stock": 8, "sku": "CDU-S-NEG" },
+        { "talle": "M", "color": "Negro", "stock": 7, "sku": "CDU-M-NEG" },
+        { "talle": "L", "color": "Negro", "stock": 3, "sku": "CDU-L-NEG" },
+        { "talle": "XL", "color": "Negro", "stock": 1, "sku": "CDU-XL-NEG" },
+        { "talle": "S", "color": "Chocolate", "stock": 2, "sku": "CDU-S-CHO" },
+        { "talle": "M", "color": "Chocolate", "stock": 4, "sku": "CDU-M-CHO" },
+        { "talle": "L", "color": "Chocolate", "stock": 0, "sku": "CDU-L-CHO" },
+        { "talle": "XL", "color": "Chocolate", "stock": 0, "sku": "CDU-XL-CHO" }
+      ]
+    },
+
+    {
+      "slug": "calza-oxford-terra-tiro-alto-bolsillos",
+      "nombre": "Calza Oxford Terra de Tiro Alto con Bolsillos Laterales",
+      "categoria": "calzas",
+      "descripcion": "Calza oxford de caída amplia desde la rodilla, con dos bolsillos laterales reales. Cintura ancha de tiro alto. Cae bien con zapatilla chata y con plataforma.\n\nTela: 72% poliéster reciclado, 28% elastano.",
+      "precio": 95000,
+      "precioAnterior": 119000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "calza-oxford-1.jpg", "alt": "Calza oxford color chocolate, vista frontal" },
+        { "archivo": "calza-oxford-2.jpg", "alt": "Calza oxford, vista de espalda" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Chocolate", "stock": 3, "sku": "COX-S-CHO" },
+        { "talle": "M", "color": "Chocolate", "stock": 5, "sku": "COX-M-CHO" },
+        { "talle": "L", "color": "Chocolate", "stock": 2, "sku": "COX-L-CHO" }
+      ]
+    },
+
+    {
+      "slug": "top-brisa-deportivo",
+      "nombre": "Top Brisa Deportivo",
+      "categoria": "tops",
+      "descripcion": "Top de sostén alto con espalda cruzada y tiras regulables. Pensado para correr.\n\nTela: 80% poliamida, 20% elastano.",
+      "precio": 64000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "top-brisa-1.jpg", "alt": "Top deportivo de sostén alto color beige, vista frontal" }
+      ],
+      "variantes": [
+        { "talle": "S", "stock": 4, "sku": "TBR-S" },
+        { "talle": "M", "stock": 6, "sku": "TBR-M" },
+        { "talle": "L", "stock": 3, "sku": "TBR-L" }
+      ]
+    },
+
+    {
+      "slug": "buzo-nube-oversize",
+      "nombre": "Buzo Nube Oversize",
+      "categoria": "buzos-y-camperas",
+      "descripcion": "Buzo de calce amplio con hombro caído y frisa liviana por dentro. Puño y cintura acanalados. Queda bien sobre top y calza, y también sobre jean.\n\nTela: 60% algodón, 40% poliéster.",
+      "precio": 128000,
+      "destacado": true,
+      "imagenes": [
+        { "archivo": "buzo-nube-1.jpg", "alt": "Buzo oversize color arena, vista frontal" },
+        { "archivo": "buzo-nube-2.jpg", "alt": "Buzo oversize, vista de espalda" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Arena", "stock": 5, "sku": "BNU-S-ARE" },
+        { "talle": "M", "color": "Arena", "stock": 4, "sku": "BNU-M-ARE" },
+        { "talle": "L", "color": "Arena", "stock": 6, "sku": "BNU-L-ARE" },
+        { "talle": "S", "color": "Gris", "stock": 2, "sku": "BNU-S-GRI" },
+        { "talle": "M", "color": "Gris", "stock": 3, "sku": "BNU-M-GRI" },
+        { "talle": "L", "color": "Gris", "stock": 1, "sku": "BNU-L-GRI" }
+      ]
+    },
+
+    {
+      "slug": "campera-nube-liviana",
+      "nombre": "Campera Nube Liviana",
+      "categoria": "buzos-y-camperas",
+      "descripcion": "Campera de entrenamiento con cierre completo y capucha. Tejido liviano que corta el viento. Bolsillos con cierre.\n\nTela: 100% poliéster reciclado.",
+      "precio": 165000,
+      "precioAnterior": 198000,
+      "destacado": true,
+      "imagenes": [
+        { "archivo": "campera-nube-1.jpg", "alt": "Campera deportiva liviana color lavanda, vista frontal" },
+        { "archivo": "campera-nube-2.jpg", "alt": "Campera deportiva con capucha, vista de tres cuartos" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Lavanda", "stock": 2, "sku": "CNU-S-LAV" },
+        { "talle": "M", "color": "Lavanda", "stock": 3, "sku": "CNU-M-LAV" },
+        { "talle": "L", "color": "Lavanda", "stock": 0, "sku": "CNU-L-LAV" }
+      ]
+    },
+
+    {
+      "slug": "remera-brisa-dry",
+      "nombre": "Remera Brisa Dry",
+      "categoria": "remeras-y-shorts",
+      "descripcion": "Remera de entrenamiento de secado rápido, calce holgado y cuello redondo. Costados con tejido perforado.\n\nTela: 100% poliéster con tratamiento de secado rápido.",
+      "precio": 62000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "remera-brisa-1.jpg", "alt": "Remera deportiva blanca de calce holgado, vista frontal" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Blanco", "stock": 7, "sku": "RBR-S-BLA" },
+        { "talle": "M", "color": "Blanco", "stock": 5, "sku": "RBR-M-BLA" },
+        { "talle": "L", "color": "Blanco", "stock": 4, "sku": "RBR-L-BLA" },
+        { "talle": "XL", "color": "Blanco", "stock": 2, "sku": "RBR-XL-BLA" },
+        { "talle": "S", "color": "Negro", "stock": 3, "sku": "RBR-S-NEG" },
+        { "talle": "M", "color": "Negro", "stock": 6, "sku": "RBR-M-NEG" },
+        { "talle": "L", "color": "Negro", "stock": 0, "sku": "RBR-L-NEG" },
+        { "talle": "XL", "color": "Negro", "stock": 1, "sku": "RBR-XL-NEG" }
+      ]
+    },
+
+    {
+      "slug": "short-duna",
+      "nombre": "Short Duna",
+      "categoria": "remeras-y-shorts",
+      "descripcion": "Short de tiro alto con calza interna. Largo medio, no sube al caminar.\n\nTela: 75% poliamida, 25% elastano.",
+      "precio": 52000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "short-duna-1.jpg", "alt": "Short deportivo negro de tiro alto, vista frontal" }
+      ],
+      "variantes": [
+        { "talle": "S", "stock": 5, "sku": "SDU-S" },
+        { "talle": "M", "stock": 4, "sku": "SDU-M" },
+        { "talle": "L", "stock": 3, "sku": "SDU-L" }
+      ]
+    },
+
+    {
+      "slug": "conjunto-terra",
+      "nombre": "Conjunto Terra",
+      "categoria": "tops",
+      "descripcion": "Conjunto de top de sostén medio y calza de tiro alto en el mismo tejido y color. Se vende junto.\n\nTela: 78% poliamida, 22% elastano.",
+      "precio": 135000,
+      "destacado": true,
+      "imagenes": [
+        { "archivo": "conjunto-terra-1.jpg", "alt": "Conjunto de top y calza color oliva, vista frontal" },
+        { "archivo": "conjunto-terra-2.jpg", "alt": "Conjunto deportivo, vista de espalda" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Oliva", "stock": 3, "sku": "CTE-S-OLI" },
+        { "talle": "M", "color": "Oliva", "stock": 2, "sku": "CTE-M-OLI" },
+        { "talle": "L", "color": "Oliva", "stock": 4, "sku": "CTE-L-OLI" }
+      ]
+    },
+
+    {
+      "slug": "calza-ciclista-brisa",
+      "nombre": "Calza Ciclista Brisa",
+      "categoria": "calzas",
+      "descripcion": "Calza ciclista de largo hasta la rodilla, tiro alto y cintura ancha. Tejido opaco.\n\nTela: 75% poliamida, 25% elastano.",
+      "precio": 68000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "calza-ciclista-1.jpg", "alt": "Calza ciclista negra hasta la rodilla, vista frontal" }
+      ],
+      "variantes": [
+        { "talle": "S", "stock": 0, "sku": "CCB-S" },
+        { "talle": "M", "stock": 0, "sku": "CCB-M" },
+        { "talle": "L", "stock": 0, "sku": "CCB-L" }
+      ]
+    },
+
+    {
+      "slug": "top-terra-cruzado",
+      "nombre": "Top Terra Cruzado",
+      "categoria": "tops",
+      "descripcion": "Top de espalda cruzada con escote recto. Sostén medio, sin copa removible.",
+      "precio": 56000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "top-terra-1.jpg", "alt": "Top deportivo color oliva con espalda cruzada, vista frontal" }
+      ],
+      "variantes": [
+        { "talle": "S", "color": "Oliva", "stock": 0, "sku": "TTE-S-OLI" },
+        { "talle": "M", "color": "Oliva", "stock": 3, "sku": "TTE-M-OLI" },
+        { "talle": "L", "color": "Oliva", "stock": 1, "sku": "TTE-L-OLI" }
+      ]
+    },
+
+    {
+      "slug": "botella-termica-terra",
+      "nombre": "Botella Térmica Terra",
+      "categoria": "accesorios",
+      "descripcion": "Botella de acero inoxidable de 750 ml con doble pared. Mantiene frío 24 horas y caliente 12. Tapa a rosca con manija.",
+      "precio": 34000,
+      "destacado": false,
+      "imagenes": [
+        { "archivo": "botella-terra-1.jpg", "alt": "Botella térmica de acero color arena" }
+      ],
+      "variantes": [{ "stock": 15, "sku": "BTE-750" }]
+    }
+  ]
+}

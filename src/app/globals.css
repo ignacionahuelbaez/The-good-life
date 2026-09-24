@@ -1,26 +1,97 @@
 @import "tailwindcss";
 
+/**
+ * Sistema de diseño de la tienda.
+ *
+ * Un solo tema, claro. No hay modo oscuro a propósito: duplicaría el trabajo de
+ * diseño de cada pantalla y las fotos de producto sobre fondo oscuro se ven
+ * peor, que es justamente lo que esta tienda tiene que hacer bien.
+ *
+ * Paleta cálida (crema + taupe) inspirada en el logo de The Good Life. El
+ * archivo del logo (`src/config/Logo(The good life).JPG`) es temporal y no
+ * se usa todavía como imagen — ver `components/tienda/logo.tsx` — pero estos
+ * tonos ya están tomados de él, así que cuando llegue el logo definitivo lo
+ * normal es que sólo haga falta afinar los valores, no cambiar de dirección.
+ *
+ * Para adaptar la tienda a la identidad real del negocio alcanza con tocar los
+ * valores de `:root`. Los componentes usan sólo los nombres semánticos.
+ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Fondos */
+  --canvas: #f6f1e7; /* fondo de la página: el crema del logo */
+  --surface: #ede6d6; /* tarjetas de producto, bloques apoyados */
+
+  /* Texto */
+  --ink: #2e2a22; /* texto principal: gris-taupe oscuro, no negro puro */
+  --muted: #8a8170; /* texto secundario, ayudas, metadatos */
+
+  /* Trazos */
+  --line: #e1d9c7;
+
+  /* Mismo tono que --ink: sostiene la referencia visual mientras no haya un
+     color de marca separado del logo (botones, CTA). */
+  --brand: #2e2a22;
+  --brand-ink: #f6f1e7; /* texto sobre el color de marca */
+
+  /* Precio promocional y avisos de oferta. Terracota, no rojo puro: se usa
+     poco y a propósito. */
+  --accent: #b5502e;
+
+  /* Estados */
+  --success: #4d7a4f;
+  --danger: #b5502e;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-canvas: var(--canvas);
+  --color-surface: var(--surface);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-ink: var(--brand-ink);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-danger: var(--danger);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-sans: var(--font-inter);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--canvas);
+  color: var(--ink);
+}
+
+/* Entrada del panel lateral. La salida no se anima: cerrar tiene que sentirse
+   inmediato. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateX(100%);
+  }
+}
+
+/* El foco visible es la única forma de navegar con teclado. Se estiliza, nunca
+   se elimina. */
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+}
+
+/* Respeta a quien pidió menos movimiento en su sistema operativo. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
