@@ -8,15 +8,16 @@ import { store } from "@/config/store";
 /** Cabecera del sitio. */
 export function Header() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-canvas/90 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-4 sm:px-6">
-        <Link href="/" aria-label={store.name} className="text-lg">
-          <Logo />
-        </Link>
+    <header className="sticky top-0 z-50 bg-canvas">
+      {/* Announcement Bar */}
+      <div className="bg-carbon-ink py-1.5 text-center text-[10px] font-normal tracking-[0.025em] text-paper-white">
+        ENVÍOS A TODO EL PAÍS — PAGOS POR TRANSFERENCIA Y WHATSAPP
+      </div>
 
-        <div className="flex items-center gap-6">
-          <nav aria-label="Principal">
-            <ul className="flex items-center gap-6 text-sm">
+      <div className="border-b border-carbon-ink/15 bg-canvas/90 backdrop-blur">
+        <div className="mx-auto flex h-16 max-w-[1440px] items-center justify-between px-4 sm:px-8">
+          <nav aria-label="Principal" className="hidden sm:block">
+            <ul className="flex items-center gap-8 text-xs font-medium uppercase tracking-[0.025em]">
               {store.nav.map((item) => (
                 <li key={item.href}>
                   <Link
@@ -30,7 +31,13 @@ export function Header() {
             </ul>
           </nav>
 
-          <CartButton />
+          <Link href="/" aria-label={store.name} className="absolute left-1/2 -translate-x-1/2 sm:static sm:translate-x-0">
+            <Logo />
+          </Link>
+
+          <div className="flex items-center gap-4">
+            <CartButton />
+          </div>
         </div>
       </div>
 

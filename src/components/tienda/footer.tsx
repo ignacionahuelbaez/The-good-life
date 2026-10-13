@@ -14,17 +14,19 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="mt-24 border-t border-line bg-canvas">
-      <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <div className="flex flex-col gap-8 sm:flex-row sm:justify-between">
-          <div className="max-w-sm">
+    <footer className="mt-24 border-t border-carbon-ink/15 bg-canvas">
+      <div className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+        <div className="grid grid-cols-1 gap-12 sm:grid-cols-3">
+          <div>
             <Logo />
-            <p className="mt-2 text-sm text-muted">{store.description}</p>
+            <p className="mt-4 text-xs leading-relaxed text-muted max-w-xs">
+              {store.description}
+            </p>
           </div>
 
-          <div className="text-sm">
-            <p className="font-medium text-ink">Contacto</p>
-            <ul className="mt-2 space-y-1 text-muted">
+          <div className="text-xs">
+            <p className="font-medium uppercase tracking-[0.025em] text-ink">Contacto</p>
+            <ul className="mt-4 space-y-2 text-muted">
               <li>
                 <a
                   href={`mailto:${store.contact.email}`}
@@ -49,14 +51,14 @@ export function Footer() {
             </ul>
           </div>
 
-          <nav aria-label="Pie de página" className="text-sm">
-            <p className="font-medium text-ink">Tienda</p>
-            <ul className="mt-2 space-y-1">
+          <nav aria-label="Pie de página" className="text-xs">
+            <p className="font-medium uppercase tracking-[0.025em] text-ink">Navegación</p>
+            <ul className="mt-4 space-y-2">
               {store.nav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="text-muted transition-colors hover:text-ink"
+                    className="text-muted transition-colors hover:text-ink uppercase"
                   >
                     {item.label}
                   </Link>
@@ -66,9 +68,10 @@ export function Footer() {
           </nav>
         </div>
 
-        <p className="mt-10 border-t border-line pt-6 text-xs text-muted">
-          © {year} {store.name}
-        </p>
+        <div className="mt-16 border-t border-carbon-ink/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-muted tracking-[0.025em]">
+          <p>© {year} {store.name}. Todos los derechos reservados.</p>
+          <p className="mt-2 sm:mt-0">Diseño editorial minimalista</p>
+        </div>
       </div>
     </footer>
   );

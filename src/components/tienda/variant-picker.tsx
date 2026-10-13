@@ -53,11 +53,11 @@ export function VariantPicker({ product }: { product: Product }) {
     <div className="space-y-6">
       {ejes.map((eje) => (
         <fieldset key={eje.name}>
-          <legend className="text-sm font-medium text-ink">
+          <legend className="text-xs font-medium uppercase tracking-[0.025em] text-ink">
             {eje.name}
             {seleccion[eje.name] && (
-              <span className="ml-2 font-normal text-muted">
-                {seleccion[eje.name]}
+              <span className="ml-2 font-normal text-muted lowercase">
+                ({seleccion[eje.name]})
               </span>
             )}
           </legend>
@@ -81,14 +81,11 @@ export function VariantPicker({ product }: { product: Product }) {
                     setSeleccion((prev) => ({ ...prev, [eje.name]: valor }))
                   }
                   className={cn(
-                    "min-w-12 border px-4 py-2 text-sm transition-colors",
+                    "min-w-12 rounded-none border px-4 py-2 text-xs font-normal tracking-[0.025em] uppercase transition-colors",
                     elegido
-                      ? "border-ink bg-ink text-brand-ink"
-                      : "border-line text-ink hover:border-ink",
-                    // Lo agotado se puede seleccionar igual: así el comprador ve
-                    // cuál era su talle y que no hay, en vez de encontrarlo
-                    // inerte y no entender por qué.
-                    agotado && !elegido && "text-muted line-through",
+                      ? "border-carbon-ink bg-carbon-ink text-paper-white"
+                      : "border-carbon-ink/30 text-ink hover:border-carbon-ink",
+                    agotado && !elegido && "text-muted line-through opacity-60",
                   )}
                 >
                   {valor}
@@ -100,7 +97,7 @@ export function VariantPicker({ product }: { product: Product }) {
       ))}
 
       {variante ? (
-        <div className="space-y-6 border-t border-line pt-6">
+        <div className="space-y-6 border-t border-carbon-ink/15 pt-6">
           <div className="space-y-3">
             <Price
               price={variante.price}
@@ -113,7 +110,7 @@ export function VariantPicker({ product }: { product: Product }) {
           <AddToCart product={product} variant={variante} />
         </div>
       ) : (
-        <p className="border-t border-line pt-6 text-sm text-muted">
+        <p className="border-t border-carbon-ink/15 pt-6 text-xs text-muted">
           Esa combinación no está disponible.
         </p>
       )}
@@ -123,13 +120,11 @@ export function VariantPicker({ product }: { product: Product }) {
 
 function Disponibilidad({ variant }: { variant: Variant | undefined }) {
   if (!variant || variant.stock === 0) {
-    return <p className="text-sm text-muted">Sin stock por ahora.</p>;
+    return <p className="text-xs tracking-[0.025em] text-muted">Sin stock por ahora.</p>;
   }
 
-  // Avisar cuántas quedan sólo cuando son pocas: con stock holgado el dato no
-  // aporta y suena a presión de venta.
   return (
-    <p className="text-sm text-success">
+    <p className="text-xs tracking-[0.025em] text-success font-medium">
       {variant.stock <= 3 ? `Últimas ${variant.stock} unidades` : "Disponible"}
     </p>
   );

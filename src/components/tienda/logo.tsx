@@ -15,10 +15,10 @@
 export function Logo({ className = "" }: { className?: string }) {
   return (
     <span
-      className={`inline-flex items-baseline gap-1.5 font-extrabold tracking-tight text-ink uppercase ${className}`}
+      className={`inline-flex items-baseline gap-1 font-bold tracking-[0.025em] text-ink uppercase ${className}`}
     >
       The Good
-      <span className="text-[0.65em] font-normal lowercase tracking-normal text-muted">
+      <span className="text-[0.7em] font-normal lowercase tracking-normal text-muted">
         life
       </span>
       <span aria-hidden className="text-brand">

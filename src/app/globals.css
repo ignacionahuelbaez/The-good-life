@@ -18,32 +18,50 @@
  */
 
 :root {
-  /* Fondos */
-  --canvas: #f6f1e7; /* fondo de la página: el crema del logo */
-  --surface: #ede6d6; /* tarjetas de producto, bloques apoyados */
+  /* Adanola Design System Tokens */
+  --color-carbon-ink: #000000;
+  --color-paper-white: #ffffff;
+  --color-soft-mist: #e5e7eb;
+  --color-warm-fog: #f0efe7;
+  --color-blush-sand: #f5ebd5;
+  --color-smoke-charcoal: #333333;
+  --color-onyx: #1d1d1d;
+  --color-stone-gray: #cccccc;
 
-  /* Texto */
-  --ink: #2e2a22; /* texto principal: gris-taupe oscuro, no negro puro */
-  --muted: #8a8170; /* texto secundario, ayudas, metadatos */
+  /* Semánticos adaptados al lookbook editorial */
+  --canvas: #ffffff; /* paper white */
+  --surface: #f0efe7; /* warm fog / soft alternating surface */
+  --ink: #000000; /* carbon ink */
+  --muted: #333333; /* smoke charcoal */
+  --line: #e5e7eb; /* soft mist / hairline */
 
-  /* Trazos */
-  --line: #e1d9c7;
+  --brand: #000000;
+  --brand-ink: #ffffff;
 
-  /* Mismo tono que --ink: sostiene la referencia visual mientras no haya un
-     color de marca separado del logo (botones, CTA). */
-  --brand: #2e2a22;
-  --brand-ink: #f6f1e7; /* texto sobre el color de marca */
-
-  /* Precio promocional y avisos de oferta. Terracota, no rojo puro: se usa
-     poco y a propósito. */
-  --accent: #b5502e;
-
-  /* Estados */
+  --accent: #b5502e; /* terracota de acento */
   --success: #4d7a4f;
   --danger: #b5502e;
+
+  /* Radios de borde según guía de diseño */
+  --radius-cards: 0px;
+  --radius-images: 0px;
+  --radius-inputs: 4px;
+  --radius-buttons: 4px;
+
+  /* Tracking tipográfico */
+  --tracking-editorial: 0.025em;
 }
 
 @theme inline {
+  --color-carbon-ink: var(--color-carbon-ink);
+  --color-paper-white: var(--color-paper-white);
+  --color-soft-mist: var(--color-soft-mist);
+  --color-warm-fog: var(--color-warm-fog);
+  --color-blush-sand: var(--color-blush-sand);
+  --color-smoke-charcoal: var(--color-smoke-charcoal);
+  --color-onyx: var(--color-onyx);
+  --color-stone-gray: var(--color-stone-gray);
+
   --color-canvas: var(--canvas);
   --color-surface: var(--surface);
   --color-ink: var(--ink);

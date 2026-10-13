@@ -64,11 +64,11 @@ export default function CarritoPage() {
 
   if (!hidratado) {
     return (
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <h1 className="text-2xl font-bold tracking-tight text-ink uppercase">
+      <section className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+        <h1 className="text-2xl font-normal tracking-[0.025em] text-ink uppercase">
           Carrito
         </h1>
-        <p className="mt-8 text-sm text-muted">Cargando…</p>
+        <p className="mt-8 text-xs text-muted tracking-[0.025em]">Cargando…</p>
       </section>
     );
   }
@@ -77,18 +77,18 @@ export default function CarritoPage() {
   // revisar, mostrar "revisando disponibilidad" sería mentira.
   if (items.length === 0) {
     return (
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <h1 className="text-2xl font-bold tracking-tight text-ink uppercase">
+      <section className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+        <h1 className="text-2xl font-normal tracking-[0.025em] text-ink uppercase">
           Carrito
         </h1>
 
         {avisos.length > 0 && <Avisos avisos={avisos} />}
 
-        <div className="mt-12 border border-dashed border-line py-20 text-center">
-          <p className="text-ink">Tu carrito está vacío.</p>
+        <div className="mt-12 border border-dashed border-carbon-ink/20 py-20 text-center">
+          <p className="text-xs text-ink uppercase tracking-[0.025em]">Tu carrito está vacío.</p>
           <Link
             href="/productos"
-            className="mt-4 inline-block border-b border-ink pb-0.5 text-sm text-ink transition-opacity hover:opacity-70"
+            className="mt-4 inline-block border-b border-carbon-ink pb-0.5 text-xs text-ink uppercase tracking-[0.025em] transition-opacity hover:opacity-70"
           >
             Ver productos
           </Link>
@@ -99,25 +99,25 @@ export default function CarritoPage() {
 
   if (revisando) {
     return (
-      <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-        <h1 className="text-2xl font-bold tracking-tight text-ink uppercase">
+      <section className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+        <h1 className="text-2xl font-normal tracking-[0.025em] text-ink uppercase">
           Carrito
         </h1>
-        <p className="mt-8 text-sm text-muted">Revisando disponibilidad…</p>
+        <p className="mt-8 text-xs text-muted tracking-[0.025em]">Revisando disponibilidad…</p>
       </section>
     );
   }
 
   return (
-    <section className="mx-auto max-w-5xl px-4 py-16 sm:px-6">
-      <h1 className="text-2xl font-bold tracking-tight text-ink uppercase">
+    <section className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+      <h1 className="text-2xl font-normal tracking-[0.025em] text-ink uppercase">
         Carrito
       </h1>
 
       {avisos.length > 0 && <Avisos avisos={avisos} />}
 
-      <div className="mt-10 grid gap-12 lg:grid-cols-[1fr_20rem]">
-        <ul className="divide-y divide-line border-y border-line">
+      <div className="mt-10 grid gap-16 lg:grid-cols-[1fr_22rem]">
+        <ul className="divide-y divide-carbon-ink/15 border-y border-carbon-ink/15">
           {items.map((item) => (
             <CartLine
               key={item.variantId}
@@ -128,25 +128,25 @@ export default function CarritoPage() {
         </ul>
 
         <aside className="lg:sticky lg:top-24 lg:self-start">
-          <div className="border border-line p-5">
-            <h2 className="text-sm font-medium tracking-wide text-ink uppercase">
+          <div className="border border-carbon-ink/15 p-6 bg-paper-white">
+            <h2 className="text-xs font-medium tracking-[0.025em] text-ink uppercase">
               Resumen
             </h2>
 
-            <div className="mt-5 flex items-baseline justify-between">
-              <span className="text-sm text-muted">Subtotal</span>
-              <span className="text-xl font-semibold text-ink">
+            <div className="mt-6 flex items-baseline justify-between">
+              <span className="text-xs text-muted tracking-[0.025em]">Subtotal</span>
+              <span className="text-lg font-medium text-ink tracking-[0.025em]">
                 {formatPrice(total)}
               </span>
             </div>
 
-            <p className="mt-2 text-xs text-muted">
+            <p className="mt-2 text-[11px] text-muted tracking-[0.025em]">
               El costo de envío se calcula en el checkout.
             </p>
 
             <Link
               href="/checkout"
-              className="mt-6 block w-full bg-brand py-3 text-center text-sm font-medium tracking-wide text-brand-ink uppercase transition-opacity hover:opacity-90"
+              className="mt-6 block w-full bg-carbon-ink py-3 text-center text-xs font-medium tracking-[0.025em] text-paper-white uppercase rounded-[4px] transition-opacity hover:opacity-90"
             >
               Finalizar compra
             </Link>
@@ -154,7 +154,7 @@ export default function CarritoPage() {
 
           <Link
             href="/productos"
-            className="mt-6 block text-center text-sm text-muted transition-colors hover:text-ink"
+            className="mt-6 block text-center text-xs text-muted tracking-[0.025em] uppercase transition-colors hover:text-ink"
           >
             Seguir comprando
           </Link>
@@ -168,7 +168,7 @@ function Avisos({ avisos }: { avisos: Aviso[] }) {
   return (
     <ul className="mt-8 space-y-2 border-l-2 border-accent bg-surface p-4">
       {avisos.map((aviso, i) => (
-        <li key={i} className="text-sm text-ink">
+        <li key={i} className="text-xs tracking-[0.025em] text-ink">
           {textoDeAviso(aviso)}
         </li>
       ))}

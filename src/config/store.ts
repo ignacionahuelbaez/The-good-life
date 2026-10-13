@@ -16,33 +16,31 @@ export const store = {
   name: "The Good Life",
 
   /** Frase corta que acompaña al nombre. Aparece en el hero y en los metadatos. */
-  tagline: "Productos elegidos con criterio",
+  tagline: "Esenciales atemporales y diseño consciente",
 
   /** Una o dos oraciones sobre el negocio. Se usa en la home y como descripción SEO. */
   description:
-    "Una selección chica y cuidada de productos, con atención personal y envíos a todo el país.",
+    "Prendas y objetos curados para un estilo de vida contemporáneo y consciente.",
 
-  /** TODO: dominio definitivo, sin barra final. Se usa para los enlaces absolutos y el sitemap. */
-  url: "https://example.com",
+  /** Dominio de la tienda. */
+  url: "https://thegoodlife.com",
 
   /** Se usa para formatear precios. */
   locale: "es-AR",
   currency: "ARS",
 
   contact: {
-    /** TODO: email al que llegan las notificaciones de pedidos. */
-    email: "hola@example.com",
-    /** Dejar en null lo que el negocio no tenga: la UI oculta lo vacío. */
-    instagram: null as string | null,
-    address: null as string | null,
+    email: "contacto@thegoodlife.com",
+    instagram: "thegoodlife.ar",
+    address: "Palermo Soho, Buenos Aires",
   },
 
   /**
    * Enlaces de la navegación principal.
-   * Sólo se listan rutas que existen. Las páginas institucionales se agregan
-   * acá cuando se construyan, en la Fase 6.
    */
-  nav: [{ href: "/productos", label: "Productos" }],
+  nav: [
+    { href: "/productos", label: "Colección" },
+  ],
 } as const;
 
 /** Formatea un precio para mostrar. Los montos vienen de la base como número. */

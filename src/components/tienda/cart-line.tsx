@@ -39,7 +39,7 @@ export function CartLine({
         href={`/producto/${item.productSlug}`}
         onClick={onNavigate}
         className={cn(
-          "relative shrink-0 overflow-hidden bg-surface",
+          "relative shrink-0 overflow-hidden rounded-none bg-surface",
           compact ? "aspect-3/4 w-20" : "aspect-3/4 w-24",
         )}
       >
@@ -49,7 +49,7 @@ export function CartLine({
             alt={item.productName}
             fill
             sizes="96px"
-            className="object-cover"
+            className="object-cover rounded-none"
           />
         )}
       </Link>
@@ -60,13 +60,13 @@ export function CartLine({
             <Link
               href={`/producto/${item.productSlug}`}
               onClick={onNavigate}
-              className="block truncate text-sm text-ink hover:opacity-70"
+              className="block truncate text-xs font-normal uppercase tracking-[0.025em] text-ink hover:opacity-70"
             >
               {item.productName}
             </Link>
 
             {item.variantName && (
-              <p className="mt-0.5 text-xs text-muted">{item.variantName}</p>
+              <p className="mt-0.5 text-[11px] text-muted tracking-[0.025em]">{item.variantName}</p>
             )}
           </div>
 
@@ -81,7 +81,7 @@ export function CartLine({
         </div>
 
         <div className="mt-auto flex items-end justify-between gap-3 pt-3">
-          <div className="flex items-center border border-line">
+          <div className="flex items-center border border-carbon-ink/30 rounded-[4px]">
             <button
               type="button"
               onClick={() => setQuantity(item.variantId, item.quantity - 1)}
@@ -92,7 +92,7 @@ export function CartLine({
             </button>
 
             <span
-              className="min-w-8 text-center text-sm tabular-nums"
+              className="min-w-8 text-center text-xs tabular-nums text-ink"
               aria-live="polite"
             >
               {item.quantity}
@@ -110,11 +110,11 @@ export function CartLine({
           </div>
 
           <div className="text-right">
-            <p className="text-sm font-medium text-ink">
+            <p className="text-xs font-medium tracking-[0.025em] text-ink">
               {formatPrice(subtotalDeLinea(item))}
             </p>
             {item.quantity > 1 && (
-              <p className="text-xs text-muted">
+              <p className="text-[10px] text-muted tracking-[0.025em]">
                 {formatPrice(item.unitPrice)} c/u
               </p>
             )}
@@ -122,7 +122,7 @@ export function CartLine({
         </div>
 
         {topeAlcanzado && (
-          <p className="mt-2 text-xs text-muted">
+          <p className="mt-2 text-[10px] text-muted tracking-[0.025em]">
             No hay más unidades disponibles.
           </p>
         )}

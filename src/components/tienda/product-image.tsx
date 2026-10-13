@@ -29,14 +29,14 @@ export function ProductImage({
 }) {
   if (image) {
     return (
-      <div className={cn("relative aspect-3/4 overflow-hidden bg-surface", className)}>
+      <div className={cn("relative aspect-3/4 overflow-hidden rounded-none bg-surface", className)}>
         <Image
           src={image.url}
           alt={image.alt ?? productName}
           fill
           sizes={sizes ?? "(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"}
           priority={priority}
-          className="object-cover"
+          className="object-cover rounded-none"
         />
       </div>
     );
@@ -45,7 +45,7 @@ export function ProductImage({
   return (
     <div
       className={cn(
-        "flex aspect-3/4 items-center justify-center overflow-hidden bg-surface p-6",
+        "flex aspect-3/4 items-center justify-center overflow-hidden rounded-none bg-surface p-6",
         className,
       )}
       style={

@@ -6,17 +6,17 @@
 -- edita ahí cada vez que cambia el CBU o el costo de envío, sin desplegar.
 
 update store_settings set
-  whatsapp_number         = '5493411234567',
-  bank_holder             = 'Nombre del Titular',
-  bank_cbu                = '0000003100010000000001',
-  bank_alias              = 'alias.de.prueba',
+  whatsapp_number         = '5493425849859',
+  bank_holder             = 'Laura Victoria Barragán',
+  bank_cbu                = '3840200500000034919525',
+  bank_alias              = 'sivesco.arg',
 
   pickup_enabled          = true,
-  pickup_address          = 'Córdoba 1234, Rosario. Lunes a viernes de 10 a 18.',
+  pickup_address          = 'Juan José paso 3954, Santa Fe, CP 3000',
 
   shipping_enabled        = true,
-  shipping_flat_cost      = 9500,
-  free_shipping_threshold = 180000,
+  shipping_flat_cost      = 10000,
+  free_shipping_threshold = 120000,
 
   announcement            = null
 where id = true;

@@ -57,7 +57,7 @@ export function AddToCart({
 
   return (
     <div className="flex flex-wrap items-stretch gap-3">
-      <div className="flex items-center border border-line">
+      <div className="flex items-center border border-carbon-ink/30 rounded-[4px]">
         <button
           type="button"
           onClick={() => setCantidad((c) => Math.max(1, c - 1))}
@@ -68,7 +68,7 @@ export function AddToCart({
           <MinusIcon className="size-4" />
         </button>
 
-        <span className="min-w-8 text-center text-sm tabular-nums">
+        <span className="min-w-8 text-center text-xs font-normal tabular-nums text-ink">
           {cantidad}
         </span>
 
@@ -87,7 +87,7 @@ export function AddToCart({
         type="button"
         onClick={agregar}
         disabled={!disponible}
-        className="flex-1 bg-brand px-8 py-3 text-sm font-medium tracking-wide text-brand-ink uppercase transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:bg-muted"
+        className="flex-1 bg-carbon-ink px-8 py-3 text-xs font-medium tracking-[0.025em] text-paper-white uppercase rounded-[4px] transition-opacity hover:opacity-90 disabled:cursor-not-allowed disabled:bg-stone-gray"
       >
         {disponible ? "Agregar al carrito" : "Sin stock"}
       </button>

@@ -25,7 +25,7 @@ export function ProductGallery({
   const [activa, setActiva] = useState(0);
 
   return (
-    <div className="space-y-3">
+    <div className="space-y-4">
       <ProductImage
         image={images[activa]}
         productName={productName}
@@ -44,10 +44,10 @@ export function ProductGallery({
                 aria-label={`Ver imagen ${i + 1} de ${images.length}`}
                 aria-current={i === activa}
                 className={cn(
-                  "block w-full border transition-colors",
+                  "block w-full border rounded-none transition-colors",
                   i === activa
-                    ? "border-ink"
-                    : "border-transparent hover:border-line",
+                    ? "border-carbon-ink"
+                    : "border-transparent hover:border-carbon-ink/30",
                 )}
               >
                 <ProductImage

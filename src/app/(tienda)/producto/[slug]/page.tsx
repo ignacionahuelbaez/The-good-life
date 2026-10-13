@@ -60,8 +60,8 @@ export default async function ProductoPage(
     .filter(Boolean);
 
   return (
-    <article className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-      <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+    <article className="mx-auto max-w-[1440px] px-4 py-16 sm:px-8">
+      <div className="grid gap-12 lg:grid-cols-2 lg:gap-20 items-start">
         <ProductGallery
           images={producto.images}
           productName={producto.name}
@@ -70,12 +70,12 @@ export default async function ProductoPage(
 
         <div className="lg:py-4">
           {producto.category && (
-            <p className="text-xs tracking-wide text-muted uppercase">
+            <p className="text-xs font-medium tracking-[0.025em] text-muted uppercase">
               {producto.category.name}
             </p>
           )}
 
-          <h1 className="mt-2 text-2xl font-bold tracking-tight text-ink sm:text-3xl">
+          <h1 className="mt-3 text-2xl font-normal tracking-[0.025em] text-ink uppercase sm:text-3xl">
             {producto.name}
           </h1>
 
@@ -84,7 +84,7 @@ export default async function ProductoPage(
           </div>
 
           {parrafos.length > 0 && (
-            <div className="mt-10 space-y-4 border-t border-line pt-8 text-sm leading-relaxed text-muted">
+            <div className="mt-12 space-y-4 border-t border-carbon-ink/15 pt-8 text-xs leading-relaxed text-muted tracking-[0.025em]">
               {parrafos.map((parrafo, i) => (
                 <p key={i}>{parrafo}</p>
               ))}
